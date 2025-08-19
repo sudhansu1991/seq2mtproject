@@ -1,21 +1,33 @@
-# seq2mtproject
-Previous PhD experiments with sequence modeling (Jupyter notebooks)
-# PhD Sequence Modeling Experiments
+# Seq2 MT Project
 
-This repository contains Jupyter notebooks from my previous PhD work on sequence modeling.  
-The code is experimental, but it documents important steps and ideas I explored.
+This repository contains my previous PhD experiments with **sequence-to-sequence machine translation**  
+using PyTorch and TorchText on the German → English Multi30k dataset.
 
 ## Contents
-- `seq2.ipynb` – main notebook with sequence modeling experiments
+- `seq2.ipynb` — Jupyter notebook implementing Seq2Seq with LSTMs
+- `requirements.txt` — dependencies to run the notebook
+- `.gitignore` — ignore cache, data, and virtual environments
+- `LICENSE` — usage terms (MIT)
 
-## About
-These notebooks reflect earlier research and may not represent my current work.  
-I’m archiving them here for reference and to share methods with others who may find them useful.
+## Features
+- Encoder–decoder with LSTM layers
+- Teacher forcing during training
+- Trains on **Multi30k** parallel dataset
+- Reports training/validation loss and perplexity
 
-## How to Use
-Clone the repository and open the notebook in Jupyter:
+## Quick start
+Clone the repo and run the notebook:
 
 ```bash
-git clone https://github.com/sudhansu1991/phd-seq-experiments.git
-cd phd-seq-experiments
+git clone https://github.com/sudhansu1991/seq2mtproject.git
+cd seq2mtproject
+
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate   # (on Windows use `.venv\Scripts\activate`)
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch Jupyter
 jupyter notebook seq2.ipynb
